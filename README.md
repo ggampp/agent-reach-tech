@@ -9,7 +9,7 @@ CLI **standalone** para coding agents pesquisarem tecnologia, desenvolvimento, o
 ## Instalação (< 10 min)
 
 ```powershell
-git clone git@github-pessoal:ggampp/agent-reach-tech.git
+git clone git@github.com:ggampp/agent-reach-tech.git
 cd agent-reach-tech
 pip install -e ".[mcp]"
 agent-reach-tech install --env=auto
