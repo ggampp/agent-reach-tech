@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "description": "Starter catalog — extend with your own OSS projects",
+  "projects": [
+    {
+      "id": "agent-reach-tech",
+      "name": "Agent Reach Tech",
+      "url": "https://github.com/ggampp/agent-reach-tech",
+      "owner": "ggampp",
+      "category": "ai-agents",
+      "subcategory": "web-access",
+      "status": "active",
+      "license": "MIT",
+      "stack": ["Python", "YAML", "CLI", "MCP", "feedparser", "yt-dlp"],
+      "tags": ["research", "opensource", "cybersecurity", "cve", "mcp", "skill"],
+      "summary": "CLI + MCP + skill for tech/OSS/security research by coding agents.",
+      "use_cases": [
+        "Evaluate open source libraries before adoption",
+        "Investigate CVEs in dependencies",
+        "Monitor HN, Lobsters and security RSS feeds"
+      ]
+    },
+    {
+      "id": "engram",
+      "name": "Engram",
+      "url": "https://github.com/Gentleman-Programming/engram",
+      "owner": "Gentleman-Programming",
+      "category": "ai-agents",
+      "subcategory": "memory",
+      "status": "active",
+      "license": "MIT",
+      "stack": ["Go", "SQLite", "MCP"],
+      "tags": ["memory", "mcp", "persistent-context", "self-hosted"],
+      "summary": "Persistent memory for coding agents. Single Go binary, local or cloud.",
+      "use_cases": ["Keep architecture decisions across sessions"]
+    }
+  ]
+}

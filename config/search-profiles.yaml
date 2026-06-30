@@ -1,0 +1,40 @@
+# Templates de busca — use com Exa (Agent Reach) ou gh/hn CLI
+profiles:
+  evaluate_library:
+    description: Avaliar biblioteca ou framework open source
+    queries:
+      - "{name} github stars issues maintenance 2026"
+      - "{name} vs alternatives comparison production ready"
+      - "site:github.com {name} security vulnerability"
+      - "site:news.ycombinator.com {name}"
+
+  cve_research:
+    description: Investigar vulnerabilidade
+    queries:
+      - "{cve_id} vendor advisory patch"
+      - "{cve_id} exploit poc github"
+      - "site:reddit.com/r/netsec {cve_id}"
+      - "{product} {cve_id} mitigation"
+
+  discover_oss:
+    description: Descobrir projetos open source em uma área
+    queries:
+      - "best open source {category} self-hosted 2026"
+      - "site:github.com {category} stars:>1000"
+      - "site:lobste.rs {category}"
+      - "show hn {category}"
+
+  security_trending:
+    description: Tendências em cibersegurança
+    queries:
+      - "critical vulnerability disclosed this week"
+      - "CISA kev catalog new additions"
+      - "supply chain attack npm pypi 2026"
+      - "zero day {technology}"
+
+  agent_tooling:
+    description: Ferramentas para coding agents
+    queries:
+      - "mcp server coding agent memory"
+      - "claude code cursor agent tooling open source"
+      - "site:github.com agent mcp stars:>500"

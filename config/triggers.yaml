@@ -1,0 +1,99 @@
+# Intent routing — used by `agent-reach-tech route` and MCP tool `route_intent`
+version: 1
+
+slash_commands:
+  - /research-tech
+  - /agent-reach-tech
+  - /pesquisa-tech
+
+intents:
+  evaluate_oss:
+    label: Avaliar projeto/biblioteca open source
+    workflow: avaliar-biblioteca.md
+    keywords:
+      - avaliar
+      - vale a pena
+      - adotar
+      - biblioteca
+      - framework
+      - comparar ferramentas
+      - evaluate
+      - worth using
+      - should i use
+    commands:
+      - catalog search
+      - github repo
+      - github search issues
+      - hn search
+      - search --profile evaluate_library
+
+  analyze_cve:
+    label: Analisar vulnerabilidade/CVE
+    workflow: analisar-cve.md
+    keywords:
+      - cve-
+      - cve
+      - vulnerabilidade
+      - vulnerability
+      - ghsa
+      - exploit
+      - zero day
+      - zero-day
+    commands:
+      - cve
+      - web nvd
+      - reddit search
+      - search --profile cve_research
+
+  discover_oss:
+    label: Descobrir projetos open source
+    workflow: pesquisar-oss.md
+    keywords:
+      - alternativas
+      - alternativas a
+      - descobrir
+      - melhor ferramenta
+      - open source para
+      - self-hosted
+      - discover
+      - alternatives to
+      - best tool for
+    commands:
+      - catalog search
+      - github search repos
+      - hn search
+      - search --profile discover_oss
+
+  monitor_trends:
+    label: Monitorar tendências tech/security
+    workflow: monitorar-tendencias.md
+    keywords:
+      - tendências
+      - tendencias
+      - o que há de novo
+      - briefing
+      - monitorar
+      - trending
+      - what's new
+      - security news
+      - feed
+    commands:
+      - hn front-page
+      - lobsters hot
+      - rss category cybersecurity
+
+  read_docs:
+    label: Ler documentação técnica
+    workflow: null
+    keywords:
+      - documentação
+      - docs
+      - readme
+      - ler site
+      - read url
+    commands:
+      - web
+
+fallback:
+  intent: evaluate_oss
+  message: Intent unclear — defaulting to evaluate_oss; refine query or use `route --json`

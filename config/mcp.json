@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "agent-reach-tech": {
+      "command": "agent-reach-tech",
+      "args": ["mcp"],
+      "env": {}
+    }
+  }
+}

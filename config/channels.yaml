@@ -1,0 +1,49 @@
+standalone: true
+
+upstream:
+  enabled: []
+  disabled:
+    - bilibili
+    - xiaohongshu
+    - facebook
+    - instagram
+    - xueqiu
+    - xiaoyuzhou
+    - linkedin
+
+tech:
+  enabled:
+    - github
+    - web
+    - youtube
+    - rss
+    - exa_search
+    - reddit
+    - hackernews
+    - lobsters
+    - cve_nvd
+    - osv
+  optional:
+    - exa_search
+    - reddit
+    - stackoverflow
+    - arxiv
+
+reddit_subreddits:
+  - programming
+  - opensource
+  - netsec
+  - cybersecurity
+  - devops
+  - selfhosted
+  - golang
+  - rust
+  - python
+
+github_topics:
+  - security
+  - open-source
+  - self-hosted
+  - devtools
+  - mcp
+  - agent

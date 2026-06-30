@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-reach-tech"
+version = "1.1.0"
+description = "Standalone tech/security research CLI for coding agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Guilherme Pimentel", email = "ggampp@gmail.com" }]
+keywords = ["mcp", "agents", "opensource", "security", "cve", "research", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "pyyaml>=6.0",
+  "feedparser>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=4.0",
+]
+rss = [
+  "feedparser>=6.0",
+]
+mcp = [
+  "mcp>=1.2.0",
+]
+all = [
+  "feedparser>=6.0",
+  "mcp>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ggampp/agent-reach-tech"
+Repository = "https://github.com/ggampp/agent-reach-tech"
+Issues = "https://github.com/ggampp/agent-reach-tech/issues"
+
+[project.scripts]
+agent-reach-tech = "agent_reach_tech.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_reach_tech*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "network: tests requiring live network access",
+]
+addopts = "-ra"

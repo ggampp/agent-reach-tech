@@ -1,0 +1,46 @@
+# Feeds RSS curados — use com feedparser (Agent Reach) ou agent-reach-tech rss list
+feeds:
+  opensource:
+    - name: GitHub Blog
+      url: https://github.blog/feed/
+      tags: [github, oss, releases]
+    - name: LWN.net
+      url: https://lwn.net/headlines/rss
+      tags: [linux, kernel, oss]
+    - name: Open Source Initiative
+      url: https://opensource.org/feed/
+      tags: [oss, licenses]
+
+  development:
+    - name: Hacker News (front page)
+      url: https://hnrss.org/frontpage
+      tags: [hn, trending, tech]
+    - name: Lobste.rs
+      url: https://lobste.rs/rss
+      tags: [lobsters, curated, tech]
+    - name: Dev.to
+      url: https://dev.to/feed
+      tags: [dev, tutorials]
+
+  cybersecurity:
+    - name: The Hacker News
+      url: https://feeds.feedburner.com/TheHackersNews
+      tags: [security, news]
+    - name: Krebs on Security
+      url: https://krebsonsecurity.com/feed/
+      tags: [security, investigation]
+    - name: CISA Cybersecurity Advisories
+      url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+      tags: [cisa, advisories, government]
+    - name: NVD Recent CVEs
+      url: https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml
+      tags: [cve, nvd]
+    - name: Schneier on Security
+      url: https://www.schneier.com/feed/atom/
+      tags: [security, analysis]
+
+  tools_and_agents:
+    - name: Gentleman Programming (Engram ecosystem)
+      url: https://www.youtube.com/feeds/videos.xml?channel_id=UCdFRiwDgyW1sad9Ft0j0XQw
+      tags: [agents, engram, youtube]
+      note: Ajuste channel_id conforme necessário

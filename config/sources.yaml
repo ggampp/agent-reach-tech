@@ -1,0 +1,54 @@
+# Fontes por domínio de pesquisa
+domains:
+  opensource:
+    priority:
+      - github
+      - hackernews
+      - lobsters
+      - reddit
+    commands:
+      - "gh search repos {query} --sort stars --limit 10"
+      - "gh search issues {query} --limit 10"
+      - "agent-reach-tech hn search \"{query}\""
+    catalog_local: "../manifests/projects.json"
+
+  development:
+    priority:
+      - github
+      - web
+      - youtube
+      - stackoverflow
+    commands:
+      - "curl -s \"https://r.jina.ai/{url}\""
+      - "yt-dlp --write-auto-sub --skip-download {youtube_url}"
+      - "gh repo view {owner}/{repo}"
+
+  cybersecurity:
+    priority:
+      - cve_nvd
+      - osv
+      - github
+      - reddit
+      - rss
+    commands:
+      - "agent-reach-tech cve {cve_id}"
+      - "agent-reach-tech osv {ecosystem} {package}"
+      - "gh api /advisories"
+      - "curl -s \"https://r.jina.ai/https://nvd.nist.gov/vuln/detail/{cve_id}\""
+
+  infrastructure:
+    priority:
+      - github
+      - web
+      - exa_search
+    commands:
+      - "gh search repos \"{query} self-hosted\" --sort stars"
+
+trusted_publishers:
+  - nvd.nist.gov
+  - cisa.gov
+  - github.com/advisories
+  - owasp.org
+  - openssl.org
+  - kubernetes.io
+  - docs.github.com
